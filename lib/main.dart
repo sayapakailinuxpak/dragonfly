@@ -1,3 +1,4 @@
+import 'package:dragonfly/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Dragonfly',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -28,10 +29,33 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        colorScheme: const ColorScheme.light(
+          primary: Color(0xFF05BE71),
+          onBackground: Color(0xFF2D2D2D)
+        ),
+        textTheme: const TextTheme(
+          headlineSmall: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 24.0,
+            fontWeight: FontWeight.w500,
+            height: 1.5,
+          ),
+          labelLarge: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 14.0,
+            fontWeight: FontWeight.w500,
+            height: 1.5,
+          ),
+          labelMedium: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 12.0,
+            fontWeight: FontWeight.w400,
+            height: 1.5,
+          )
+        ),
+        // useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const Onboarding(),
     );
   }
 }
