@@ -35,7 +35,7 @@ class OnboardingOne extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: OnboardingOneControlSection(
               title: "Easy to manage money", 
-              description: "Transfer and receive your money easily with dragonfly bank" 
+              description: "Transfer and receive your money easily with\n dragonfly bank" 
             ),
           )
         ],
