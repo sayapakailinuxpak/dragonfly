@@ -1,7 +1,4 @@
 import 'package:dragonfly/screens/onboarding.dart';
-import 'package:dragonfly/screens/onboarding_1.dart';
-import 'package:dragonfly/screens/onboarding_2.dart';
-import 'package:dragonfly/screens/onboarding_3.dart';
 import 'package:flutter/material.dart';
 
 void main() {
