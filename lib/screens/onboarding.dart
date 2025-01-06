@@ -3,6 +3,12 @@ import 'package:dragonfly/data/onboarding_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+double _imageBanner1Onboarding1OffsetDxValue = 0.0;
+double _imageBanner2Onboarding1OffsetDxValue = 0.0;
+double _imageBanner2Onboarding3OffsetDxValue = 0.55;
+double _imageBanner3Onboarding3OffsetDxValue = -0.55;
+
+
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
 
@@ -71,7 +77,35 @@ class _OnboardingState extends State<Onboarding> {
   
 }
 
-class _OnboardingBodyOne extends StatelessWidget {
+class _OnboardingBodyOne extends StatefulWidget {
+
+  @override
+  State<_OnboardingBodyOne> createState() => _OnboardingBodyOneState();
+}
+
+class _OnboardingBodyOneState extends State<_OnboardingBodyOne> {
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(milliseconds:1500)).then((value) => setState(() {
+      _imageBanner1Onboarding1OffsetDxValue = 0.85;
+    }));
+
+    Future.delayed(const Duration(milliseconds: 2000)).then((value) => setState(() {
+      _imageBanner2Onboarding1OffsetDxValue = 0.7;
+    }));
+  }
+
+
+  @override
+  void dispose() {
+    super.dispose();
+    setState(() {
+      _imageBanner1Onboarding1OffsetDxValue = 0.0;
+      _imageBanner2Onboarding1OffsetDxValue = 0.0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,18 +113,25 @@ class _OnboardingBodyOne extends StatelessWidget {
       children: [
         Stack(
           children: [
-            Transform.translate(
-              offset: const Offset(0, 20.0),
-              child: Image.asset(OnboardingModel.onboardingItems[0].imageBanners[1])
-            ),
-            Transform.translate(
-              offset: Offset(
-                - (MediaQuery.of(context).size.width / 4), 
-                0
+            AnimatedSlide(
+              offset: Offset(_imageBanner1Onboarding1OffsetDxValue, 0.0),
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.linearToEaseOut,
+              child: Transform.translate(
+                offset: Offset(-(MediaQuery.of(context).size.width), 25.0),
+                child: Image.asset("assets/images/credit-card-image-2.png")
               ),
-              child: Image.asset(OnboardingModel.onboardingItems[0].imageBanners[0]),
             ),
-          ],
+            AnimatedSlide(
+              offset: Offset(_imageBanner2Onboarding1OffsetDxValue, 0.0),
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.linearToEaseOut,
+              child: Transform.translate(
+                offset: Offset(-(MediaQuery.of(context).size.width), 0.0),
+                child: Image.asset("assets/images/credit-card-image-1.png")
+              )
+            ),
+          ]
         ),
         Column(
           children: [
@@ -125,7 +166,6 @@ class _OnboardingBodyOne extends StatelessWidget {
                 ),
               ],
             ),
-            // const SizedBox(height: 24.0),
           ],
         ),
       ],
@@ -133,8 +173,24 @@ class _OnboardingBodyOne extends StatelessWidget {
   }
 }
 
-class _OnboardingBodyTwo extends StatelessWidget {
+class _OnboardingBodyTwo extends StatefulWidget {
   
+  @override
+  State<_OnboardingBodyTwo> createState() => _OnboardingBodyTwoState();
+}
+
+class _OnboardingBodyTwoState extends State<_OnboardingBodyTwo> {
+
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      _imageBanner1Onboarding1OffsetDxValue = 0.85;
+      _imageBanner2Onboarding1OffsetDxValue = 0.7;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -163,8 +219,33 @@ class _OnboardingBodyTwo extends StatelessWidget {
   }
 }
 
-class _OnboardingBodyThree extends StatelessWidget {
+class _OnboardingBodyThree extends StatefulWidget {
   
+  @override
+  State<_OnboardingBodyThree> createState() => _OnboardingBodyThreeState();
+}
+
+class _OnboardingBodyThreeState extends State<_OnboardingBodyThree> {
+
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(milliseconds: 1500)).then((value) => setState(() {
+      _imageBanner2Onboarding3OffsetDxValue = 0.0;
+      _imageBanner3Onboarding3OffsetDxValue = 0.0;
+    }));
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    setState(() {
+      _imageBanner2Onboarding3OffsetDxValue = 0.0;
+      _imageBanner3Onboarding3OffsetDxValue = 0.0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -173,18 +254,27 @@ class _OnboardingBodyThree extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Transform.translate(
-                offset: Offset(MediaQuery.of(context).size.width / -5, 0.0),
-                child: Image.asset(
-                  OnboardingModel.onboardingItems[2].imageBanners[2],
-                  height: 240.0,
+              AnimatedSlide(
+                offset: Offset(_imageBanner2Onboarding3OffsetDxValue, 0.0),
+                duration: const Duration(milliseconds: 150),
+                curve: Curves.linearToEaseOut,
+                child: Transform.translate(
+                  offset: Offset(-(MediaQuery.of(context).size.width / 5), 0.0),
+                  child: Image.asset(
+                    OnboardingModel.onboardingItems[2].imageBanners[2],
+                    height: 240.0,
+                  ),
                 ),
               ),
-              Transform.translate(
-                offset: Offset(MediaQuery.of(context).size.width / 5, 0.0),
-                child: Image.asset(
-                  OnboardingModel.onboardingItems[2].imageBanners[1],
-                  height: 240.0,
+              AnimatedSlide(
+                offset: Offset(_imageBanner3Onboarding3OffsetDxValue, 0.0),
+                duration: const Duration(milliseconds: 150),
+                child: Transform.translate(
+                  offset: Offset(MediaQuery.of(context).size.width / 5, 0.0),
+                  child: Image.asset(
+                    OnboardingModel.onboardingItems[2].imageBanners[1],
+                    height: 240.0,
+                  ),
                 ),
               ),
               Image.asset(
