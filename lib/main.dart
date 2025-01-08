@@ -1,3 +1,4 @@
+import 'package:dragonfly/screens/auth.dart';
 import 'package:dragonfly/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 
@@ -34,11 +35,23 @@ class MyApp extends StatelessWidget {
           onBackground: Color(0xFF2D2D2D)
         ),
         textTheme: const TextTheme(
+          headlineMedium: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 28.0,
+            fontWeight: FontWeight.w500,
+            height: 1.5
+          ),
           headlineSmall: TextStyle(
             fontFamily: "Montserrat",
             fontSize: 24.0,
             fontWeight: FontWeight.w500,
             height: 1.5,
+          ),
+          titleMedium: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 16.0,
+            fontWeight: FontWeight.w400,
+            height: 1.5
           ),
           labelLarge: TextStyle(
             fontFamily: "Montserrat",
@@ -55,7 +68,7 @@ class MyApp extends StatelessWidget {
         ),
         // useMaterial3: true,
       ),
-      home: const Onboarding(),
+      home: const Auth(),
     );
   }
 }

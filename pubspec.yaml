@@ -63,6 +63,9 @@ flutter:
     - assets/icons/change-language-icon.svg
     - assets/icons/chevron-down-icon.svg
     - assets/icons/dragonfly-logo.svg
+    - assets/icons/lock-icon.svg
+    - assets/icons/dot-icon.svg
+    - assets/icons/backspace-icon.svg
     - assets/images/credit-card-image-1.png
     - assets/images/credit-card-image-2.png
     - assets/images/credit-card-combo-image.png
