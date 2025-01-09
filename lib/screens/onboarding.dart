@@ -1,5 +1,6 @@
 import 'package:dragonfly/components/primary_button.dart';
 import 'package:dragonfly/data/onboarding_model.dart';
+import 'package:dragonfly/screens/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -70,7 +71,14 @@ class _OnboardingState extends State<Onboarding> {
           right: 16.0,
           bottom: 16.0
         ),
-        child: const PrimaryButton(label: "Get Started"),
+        child: PrimaryButton(
+          label: "Get Started",
+          clicked: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const Auth())
+            );
+          },
+        ),
       )
     );
   }

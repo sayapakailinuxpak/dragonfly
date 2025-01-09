@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String label;
+  final Function clicked;
   
-  const PrimaryButton({super.key, required this.label});
+  const PrimaryButton({required this.label, required this.clicked, super.key});
   
   @override
   Widget build(BuildContext context) {
     return FilledButton(
-      onPressed: () {}, 
+      onPressed: () {
+        clicked();
+      }, 
       style: ButtonStyle(
         textStyle: MaterialStatePropertyAll(Theme.of(context).textTheme.labelLarge),
         backgroundColor: MaterialStatePropertyAll(Theme.of(context).primaryColor),

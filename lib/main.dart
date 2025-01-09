@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
         ),
         // useMaterial3: true,
       ),
-      home: const Auth(),
+      home: const Onboarding(),
     );
   }
 }

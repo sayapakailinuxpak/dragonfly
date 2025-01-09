@@ -55,15 +55,15 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
   bool isValid = false;
   int currentCursor = 0;
   bool isLastCursor = false;
-  Map<int, String?> securityCode = {
-    0: null,
-    1: null,
-    2: null,
-    3: null
-  };
+  // Map<int, String?> securityCode = {
+  //   0: null,
+  //   1: null,
+  //   2: null,
+  //   3: null
+  // };
 
+  List<String?> securityCode = [null, null, null, null];
   
-
   @override
   Widget build(BuildContext context) {
     return Column(
