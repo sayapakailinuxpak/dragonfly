@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -28,7 +29,6 @@ class Auth extends StatelessWidget {
             ),
             const SizedBox(height: 16.0),
             const SecurityCodeForm(),
-            // Keypad()
           ],
         ),
       )
@@ -55,14 +55,8 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
   bool isValid = false;
   int currentCursor = 0;
   bool isLastCursor = false;
-  // Map<int, String?> securityCode = {
-  //   0: null,
-  //   1: null,
-  //   2: null,
-  //   3: null
-  // };
-
   List<String?> securityCode = [null, null, null, null];
+  List<String?> correctSecurityCode = ["1","2","3","4"];
   
   @override
   Widget build(BuildContext context) {
@@ -75,7 +69,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
               padding: const EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: isLastCursor ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
+                  color: isLastCursor && securityCode[0] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0))
               ),
@@ -98,7 +92,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
               padding: const EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: isLastCursor ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
+                  color: isLastCursor && securityCode[1] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0))
               ),
@@ -121,7 +115,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
               padding: const EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: isLastCursor ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
+                  color: isLastCursor && securityCode[2] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0))
               ),
@@ -144,7 +138,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
               padding: const EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: isLastCursor ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
+                  color: isLastCursor && securityCode[3] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0))
               ),
@@ -234,7 +228,32 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
                       }
                     } 
                     
+                    if (listEquals(securityCode, correctSecurityCode)) {
+                      if (isLastCursor) {
+                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                          content: Text("Welcome back!"),
+                        ));
+
+                        // Future.delayed(Duration(seconds: 1)).then((value){
+                          
+                        // });
+                      }
+                    } else {
+                      if (isLastCursor) {
+                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                          content: Text("Wrong Password (Try 1234:>)"),
+                        ));
+                        securityCode[0] = null;
+                        securityCode[1] = null;
+                        securityCode[2] = null;
+                        securityCode[3] = null;
+                        currentCursor = 0;
+                      }  
+                    }
                   });
+
+                  
+
                   debugPrint("Sec code 0 = ${securityCode[0]}");
                   debugPrint("Sec code 1 = ${securityCode[1]}");
                   debugPrint("Sec code 2 = ${securityCode[2]}");
