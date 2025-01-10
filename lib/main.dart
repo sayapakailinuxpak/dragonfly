@@ -1,4 +1,5 @@
 import 'package:dragonfly/screens/auth.dart';
+import 'package:dragonfly/screens/home.dart';
 import 'package:dragonfly/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: const ColorScheme.light(
           primary: Color(0xFF05BE71),
+          secondary: Color(0xFF7443FF),
           onBackground: Color(0xFF2D2D2D)
         ),
         textTheme: const TextTheme(
