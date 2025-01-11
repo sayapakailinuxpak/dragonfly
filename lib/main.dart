@@ -55,6 +55,18 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w400,
             height: 1.5
           ),
+          bodyMedium: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 14.0,
+            fontWeight: FontWeight.w400,
+            height: 1.5
+          ),
+          bodySmall: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 12.0,
+            fontWeight: FontWeight.w400,
+            height: 1.5
+          ),
           labelLarge: TextStyle(
             fontFamily: "Montserrat",
             fontSize: 14.0,
@@ -66,11 +78,17 @@ class MyApp extends StatelessWidget {
             fontSize: 12.0,
             fontWeight: FontWeight.w400,
             height: 1.5,
+          ),
+          labelSmall: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 10.0,
+            fontWeight: FontWeight.w400,
+            height: 1.5
           )
         ),
         // useMaterial3: true,
       ),
-      home: const Onboarding(),
+      home: const Home()
     );
   }
 }
