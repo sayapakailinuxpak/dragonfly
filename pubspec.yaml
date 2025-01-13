@@ -80,6 +80,7 @@ flutter:
     - assets/icons/notification-status-icon.svg
     - assets/icons/profile-icon.svg
     - assets/icons/bell-icon.svg
+    - assets/icons/arrow-left-icon.svg
     - assets/images/credit-card-image-1.png
     - assets/images/credit-card-image-2.png
     - assets/images/credit-card-combo-image.png

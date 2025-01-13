@@ -1,5 +1,6 @@
 import 'package:dragonfly/screens/auth.dart';
 import 'package:dragonfly/screens/home.dart';
+import 'package:dragonfly/screens/notification_detail.dart';
 import 'package:dragonfly/screens/onboarding.dart';
 import 'package:dragonfly/screens/inbox.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,13 @@ class MyApp extends StatelessWidget {
             fontFamily: "Montserrat",
             fontSize: 24.0,
             fontWeight: FontWeight.w500,
-            height: 1.5,
+            height: 1.5
+          ),
+          titleLarge: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 20.0,
+            fontWeight: FontWeight.w500,
+            height: 1.5
           ),
           titleMedium: TextStyle(
             fontFamily: "Montserrat",
@@ -95,7 +102,7 @@ class MyApp extends StatelessWidget {
         ),
         // useMaterial3: true,
       ),
-      home: const Inbox()
+      home: NotificationDetail()
     );
   }
 }
