@@ -102,7 +102,7 @@ class MyApp extends StatelessWidget {
         ),
         // useMaterial3: true,
       ),
-      home: NotificationDetail()
+      home: Inbox()
     );
   }
 }

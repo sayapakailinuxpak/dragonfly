@@ -1,9 +1,8 @@
 
 import 'package:dragonfly/data/inbox_model.dart';
 import 'package:dragonfly/data/notification_model.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:dragonfly/screens/notification_detail.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Inbox extends StatelessWidget {
@@ -125,32 +124,44 @@ class NotificationSection extends StatelessWidget {
       child: ListView.separated(
         shrinkWrap: true,
         itemBuilder: (context, index) {
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                NotificationModel.notificationItems[index].title,
-                style: Theme.of(context).textTheme.titleMedium?.apply(
-                  color: Theme.of(context).colorScheme.primary
+          return InkWell(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  NotificationModel.notificationItems[index].title,
+                  style: Theme.of(context).textTheme.titleMedium?.apply(
+                    color: Theme.of(context).colorScheme.primary
+                  )
+                ),
+                const SizedBox(height: 16.0),
+                Text(
+                  NotificationModel.notificationItems[index].messageBody,
+                  style: Theme.of(context).textTheme.bodySmall?.apply(
+                    color: const Color(0xFF606060)
+                  ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(height: 16.0),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    NotificationModel.notificationItems[index].thumbnailImage,
+                  ),
                 )
-              ),
-              const SizedBox(height: 16.0),
-              Text(
-                NotificationModel.notificationItems[0].messageBody,
-                style: Theme.of(context).textTheme.bodySmall?.apply(
-                  color: const Color(0xFF606060)
-                ),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-              const SizedBox(height: 16.0),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(
-                  NotificationModel.notificationItems[index].thumbnailImage,
-                ),
-              )
-            ],
+              ],
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return NotificationDetail(notificationModel: NotificationModel.notificationItems[index]);
+                  },
+                )
+              );
+            },
           );
         }, 
         separatorBuilder: (context, index) {

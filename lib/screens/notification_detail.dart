@@ -1,17 +1,20 @@
 import 'package:dragonfly/data/notification_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class NotificationDetail extends StatelessWidget {
-  const NotificationDetail({super.key});
+  final NotificationModel notificationModel;
+
+  const NotificationDetail({super.key, required this.notificationModel});
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {}, 
+          onPressed: () {
+            Navigator.pop(context);
+          }, 
           icon: SvgPicture.asset(
             "assets/icons/arrow-left-icon.svg"
           )
@@ -33,19 +36,19 @@ class NotificationDetail extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
-                  NotificationModel.notificationItems[0].thumbnailImage
+                  notificationModel.thumbnailImage
                 ),
               ),
               const SizedBox(height: 16.0),
               Text(
-                NotificationModel.notificationItems[0].title,
+                notificationModel.title,
                 style: Theme.of(context).textTheme.titleLarge?.apply(
                   color: Theme.of(context).colorScheme.primary
                 ),
               ),
               const SizedBox(height: 16.0),
               Text(
-                NotificationModel.notificationItems[0].messageBody,
+                notificationModel.messageBody,
                 style: Theme.of(context).textTheme.bodySmall?.apply(
                   color: const Color(0xFF606060)
                 )
