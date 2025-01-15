@@ -3,6 +3,7 @@ import 'package:dragonfly/screens/home.dart';
 import 'package:dragonfly/screens/notification_detail.dart';
 import 'package:dragonfly/screens/onboarding.dart';
 import 'package:dragonfly/screens/inbox.dart';
+import 'package:dragonfly/screens/profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
         colorScheme: const ColorScheme.light(
           primary: Color(0xFF05BE71),
           secondary: Color(0xFF7443FF),
-          onBackground: Color(0xFF2D2D2D)
+          onBackground: Color(0xFF2D2D2D),
+          error: Color(0xFFFE324E)
         ),
         textTheme: const TextTheme(
           headlineMedium: TextStyle(
@@ -102,7 +104,7 @@ class MyApp extends StatelessWidget {
         ),
         // useMaterial3: true,
       ),
-      home: Inbox()
+      home: Profile()
     );
   }
 }

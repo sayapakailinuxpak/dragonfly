@@ -81,6 +81,10 @@ flutter:
     - assets/icons/profile-icon.svg
     - assets/icons/bell-icon.svg
     - assets/icons/arrow-left-icon.svg
+    - assets/icons/github-icon.svg
+    - assets/icons/linkedin-icon.svg
+    - assets/icons/dribbble-icon.svg
+    - assets/icons/chevron-right-icon.svg
     - assets/images/credit-card-image-1.png
     - assets/images/credit-card-image-2.png
     - assets/images/credit-card-combo-image.png
@@ -95,6 +99,7 @@ flutter:
     - assets/images/pocket-credit-card-4-image.png
     - assets/images/investment-image.png
     - assets/images/pay-image.png
+    - assets/images/foto-diri-image.png
   
   fonts:
     - family: Montserrat
