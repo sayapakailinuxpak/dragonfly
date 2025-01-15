@@ -85,6 +85,7 @@ flutter:
     - assets/icons/linkedin-icon.svg
     - assets/icons/dribbble-icon.svg
     - assets/icons/chevron-right-icon.svg
+    - assets/icons/plus-icon.svg
     - assets/images/credit-card-image-1.png
     - assets/images/credit-card-image-2.png
     - assets/images/credit-card-combo-image.png
