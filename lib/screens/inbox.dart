@@ -14,6 +14,7 @@ class Inbox extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text(
             "Inbox",
             style: Theme.of(context).textTheme.titleMedium?.apply(

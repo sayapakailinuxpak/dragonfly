@@ -15,7 +15,6 @@ class Entry extends StatefulWidget {
 
 class _EntryState extends State<Entry> {
 
-
   int _currentPageIndex = 0;
   
   @override

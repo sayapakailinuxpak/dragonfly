@@ -9,6 +9,7 @@ class Pocket extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(
           "Pocket",
           style: Theme.of(context).textTheme.titleMedium?.apply(
