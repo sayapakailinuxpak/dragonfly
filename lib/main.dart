@@ -1,5 +1,6 @@
 import 'package:dragonfly/screens/auth.dart';
 import 'package:dragonfly/screens/home.dart';
+import 'package:dragonfly/screens/entry.dart';
 import 'package:dragonfly/screens/notification_detail.dart';
 import 'package:dragonfly/screens/onboarding.dart';
 import 'package:dragonfly/screens/inbox.dart';
@@ -99,7 +100,7 @@ class MyApp extends StatelessWidget {
         ),
         // useMaterial3: true,
       ),
-      home: Pocket()
+      home: Entry()
     );
   }
 }
