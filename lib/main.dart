@@ -1,11 +1,4 @@
-import 'package:dragonfly/screens/auth.dart';
-import 'package:dragonfly/screens/home.dart';
-import 'package:dragonfly/screens/entry.dart';
-import 'package:dragonfly/screens/notification_detail.dart';
 import 'package:dragonfly/screens/onboarding.dart';
-import 'package:dragonfly/screens/inbox.dart';
-import 'package:dragonfly/screens/pocket.dart';
-import 'package:dragonfly/screens/profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
