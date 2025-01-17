@@ -1,3 +1,4 @@
+import 'package:dragonfly/screens/entry.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -234,9 +235,14 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
                           content: Text("Welcome back!"),
                         ));
 
-                        // Future.delayed(Duration(seconds: 1)).then((value){
-                          
-                        // });
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const Entry();
+                            },
+                          )
+                        );
                       }
                     } else {
                       if (isLastCursor) {
