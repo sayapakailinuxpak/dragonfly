@@ -1,16 +1,18 @@
 # dragonfly
 
-A new Flutter project.
+Mobile Banking App (Concept)
 
-## Getting Started
+<img src="assets/images/presentation-banner-image.png" />
 
-This project is a starting point for a Flutter application.
+## Things have I implemented?
+1. Material 3
+2. Use of Stateless and Stateful Widget
+3. Implicit Animation
+3. PageView
+4. GridView
+5. Navigator and Navigation Bar
+6. Table
+7. TabBar and TabController
 
-A few resources to get you started if this is your first Flutter project:
+Shoutout to <a href="https://www.figma.com/@rizkysentro">designer</a> for the UI Kit: <a href="https://www.figma.com/community/file/1259827886723480385/mobile-app-banking-mobile-app">Click Here</a>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
