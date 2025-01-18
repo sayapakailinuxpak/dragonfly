@@ -24,9 +24,9 @@ class _EntryState extends State<Entry> {
         data: NavigationBarThemeData(
           indicatorShape: const CircleBorder(),
           indicatorColor: const Color(0x00FFFFFF),
-          surfaceTintColor: Theme.of(context).colorScheme.background,
-          labelTextStyle: MaterialStateProperty.resolveWith((states) {
-            return states.contains(MaterialState.selected) 
+          surfaceTintColor: Theme.of(context).colorScheme.surface,
+          labelTextStyle: WidgetStateProperty.resolveWith((states) {
+            return states.contains(WidgetState.selected) 
               ? Theme.of(context).textTheme.labelMedium?.apply(
                 color: Theme.of(context).colorScheme.primary
               )

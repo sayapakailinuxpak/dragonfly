@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: const ColorScheme.light(
           primary: Color(0xFF05BE71),
           secondary: Color(0xFF7443FF),
-          onBackground: Color(0xFF2D2D2D),
+          onSurface: Color(0xFF2D2D2D),
           error: Color(0xFFFE324E)
         ),
         textTheme: const TextTheme(

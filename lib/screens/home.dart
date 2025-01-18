@@ -58,49 +58,49 @@ class _BalanceSectionState extends State<BalanceSection> {
           "assets/icons/dot-icon.svg",
           width: 8.0,
           height: 8.0,
-          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
         ),
         const SizedBox(width: 6.0),
         SvgPicture.asset(
           "assets/icons/dot-icon.svg",
           width: 8.0,
           height: 8.0,
-          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
         ),
         const SizedBox(width: 6.0),
         SvgPicture.asset(
           "assets/icons/dot-icon.svg",
           width: 8.0,
           height: 8.0,
-          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
         ),
         const SizedBox(width: 6.0),
         SvgPicture.asset(
           "assets/icons/dot-icon.svg",
           width: 8.0,
           height: 8.0,
-          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
         ),
         const SizedBox(width: 6.0),
         SvgPicture.asset(
           "assets/icons/dot-icon.svg",
           width: 8.0,
           height: 8.0,
-          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
         ),
         const SizedBox(width: 6.0),
         SvgPicture.asset(
           "assets/icons/dot-icon.svg",
           width: 8.0,
           height: 8.0,
-          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
         ),
         const SizedBox(width: 6.0),
         SvgPicture.asset(
           "assets/icons/dot-icon.svg",
           width: 8.0,
           height: 8.0,
-          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
         )
       ],
     );
@@ -136,7 +136,7 @@ class _BalanceSectionState extends State<BalanceSection> {
                       "\$ 49,250.00",
                       style: Theme.of(context).textTheme.headlineSmall?.apply(
                         // fontStyle: FontStyle.normal,
-                        color: Theme.of(context).colorScheme.onBackground
+                        color: Theme.of(context).colorScheme.onSurface
                       ),
                     ) : 
                     showBalanceDots(context),
@@ -151,12 +151,12 @@ class _BalanceSectionState extends State<BalanceSection> {
                       "assets/icons/eye-slash-icon.svg",
                       width: 20.0,
                       height: 20.0,
-                      colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+                      colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                     ) : SvgPicture.asset(
                       "assets/icons/eye-icon.svg",
                       width: 20.0,
                       height: 20.0,
-                      colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+                      colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                     )
                   ) 
                 ],
@@ -270,12 +270,12 @@ class _BalanceSectionState extends State<BalanceSection> {
                             "assets/icons/close-square-icon.svg",
                             width: 20.0,
                             height: 20.0,
-                            colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+                            colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                           ),
                           const SizedBox(height: 80.0),
                           SvgPicture.asset(
                             "assets/icons/arrow-right-icon.svg",
-                            colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+                            colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                           ),
                         ],
                       )     
@@ -318,7 +318,7 @@ class MyPocketSection extends StatelessWidget {
                   Text(
                     "My Pocket",
                     style: Theme.of(context).textTheme.titleMedium?.apply(
-                      color: Theme.of(context).colorScheme.onBackground,
+                      color: Theme.of(context).colorScheme.onSurface,
                       fontWeightDelta: 2
                     )
                   )
@@ -366,7 +366,7 @@ class MyPocketSection extends StatelessWidget {
                               child: Text(
                                 MyPocketModel.myPocketItems[0].pocketTitle,
                                 style: Theme.of(context).textTheme.labelSmall?.apply(
-                                  color: Theme.of(context).colorScheme.onBackground
+                                  color: Theme.of(context).colorScheme.onSurface
                                 )
                               ),
                             ),
@@ -408,7 +408,7 @@ class MyPocketSection extends StatelessWidget {
                               child: Text(
                                 MyPocketModel.myPocketItems[1].pocketTitle,
                                 style: Theme.of(context).textTheme.labelSmall?.apply(
-                                  color: Theme.of(context).colorScheme.onBackground
+                                  color: Theme.of(context).colorScheme.onSurface
                                 )
                               ),
                             ),
@@ -451,7 +451,7 @@ class MyPocketSection extends StatelessWidget {
                           child: Text(
                             MyPocketModel.myPocketItems[2].pocketTitle,
                             style: Theme.of(context).textTheme.labelSmall?.apply(
-                              color: Theme.of(context).colorScheme.onBackground
+                              color: Theme.of(context).colorScheme.onSurface
                             )
                           ),
                         ),
@@ -488,7 +488,7 @@ class MyPocketSection extends StatelessWidget {
                           child: Text(
                             MyPocketModel.myPocketItems[3].pocketTitle,
                             style: Theme.of(context).textTheme.labelSmall?.apply(
-                              color: Theme.of(context).colorScheme.onBackground
+                              color: Theme.of(context).colorScheme.onSurface
                             )
                           ),
                         ),
@@ -551,7 +551,7 @@ class CurrencySection extends StatelessWidget {
                   Text(
                     "Currency",
                     style: Theme.of(context).textTheme.titleMedium?.apply(
-                      color: Theme.of(context).colorScheme.onBackground,
+                      color: Theme.of(context).colorScheme.onSurface,
                       fontWeightDelta: 2
                     )
                   )

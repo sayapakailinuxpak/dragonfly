@@ -13,10 +13,10 @@ class PrimaryButton extends StatelessWidget {
         clicked();
       }, 
       style: ButtonStyle(
-        textStyle: MaterialStatePropertyAll(Theme.of(context).textTheme.labelLarge),
-        backgroundColor: MaterialStatePropertyAll(Theme.of(context).primaryColor),
-        padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 16.0, horizontal: 10.0)),
-        shape: MaterialStateProperty.all(
+        textStyle: WidgetStatePropertyAll(Theme.of(context).textTheme.labelLarge),
+        backgroundColor: WidgetStatePropertyAll(Theme.of(context).primaryColor),
+        padding: const WidgetStatePropertyAll(EdgeInsets.symmetric(vertical: 16.0, horizontal: 10.0)),
+        shape: WidgetStateProperty.all(
           const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(8.0))
           )

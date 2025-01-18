@@ -147,7 +147,7 @@ class _OnboardingBodyOneState extends State<_OnboardingBodyOne> {
             Text(
               OnboardingModel.onboardingItems[0].title,
               style: Theme.of(context).textTheme.headlineSmall?.apply(
-                color: Theme.of(context).colorScheme.onBackground
+                color: Theme.of(context).colorScheme.onSurface
               )
             ),
             const SizedBox(height: 16.0),
@@ -164,7 +164,7 @@ class _OnboardingBodyOneState extends State<_OnboardingBodyOne> {
                 Text(
                   "Swipe for more",
                   style: Theme.of(context).textTheme.labelLarge?.apply(
-                  color: Theme.of(context).colorScheme.onBackground
+                  color: Theme.of(context).colorScheme.onSurface
                 ),
               ),
                 const SizedBox(height: 4.0),
@@ -210,7 +210,7 @@ class _OnboardingBodyTwoState extends State<_OnboardingBodyTwo> {
           Text(
             OnboardingModel.onboardingItems[1].title,
             style: Theme.of(context).textTheme.headlineSmall?.apply(
-              color: Theme.of(context).colorScheme.onBackground
+              color: Theme.of(context).colorScheme.onSurface
             )
           ),
           const SizedBox(height: 16.0),
@@ -295,7 +295,7 @@ class _OnboardingBodyThreeState extends State<_OnboardingBodyThree> {
           Text(
             OnboardingModel.onboardingItems[2].title,
             style: Theme.of(context).textTheme.headlineSmall?.apply(
-              color: Theme.of(context).colorScheme.onBackground
+              color: Theme.of(context).colorScheme.onSurface
             )
           ),
           const SizedBox(height: 16.0),

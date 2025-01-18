@@ -62,11 +62,11 @@ class _FilterSectionState extends State<FilterSection> {
                       label: Text(
                         pocketCategories[index],
                       ),
-                      color: MaterialStateProperty.resolveWith((states) {
-                        if (states.contains(MaterialState.focused)) {
+                      color: WidgetStateProperty.resolveWith((states) {
+                        if (states.contains(WidgetState.focused)) {
                           return Theme.of(context).colorScheme.primary;
                         }
-                        return Theme.of(context).colorScheme.background;
+                        return Theme.of(context).colorScheme.surface;
                       }),
                       selected: _selectedItemIndex == index,
                       onSelected: (selected) {
@@ -75,10 +75,10 @@ class _FilterSectionState extends State<FilterSection> {
                         }); 
                       },
                       side: _selectedItemIndex != index ? const BorderSide(color: Color(0xFFEBEBEB)) : BorderSide(color: Theme.of(context).colorScheme.primary),
-                      backgroundColor: Theme.of(context).colorScheme.background,
-                      selectedColor: Theme.of(context).colorScheme.background,
+                      backgroundColor: Theme.of(context).colorScheme.surface,
+                      selectedColor: Theme.of(context).colorScheme.surface,
                       labelStyle: Theme.of(context).textTheme.labelMedium?.apply(
-                        color: _selectedItemIndex != index ? Theme.of(context).colorScheme.onBackground : Theme.of(context).colorScheme.primary,
+                        color: _selectedItemIndex != index ? Theme.of(context).colorScheme.onSurface : Theme.of(context).colorScheme.primary,
                       fontWeightDelta: 1
                       ),
                       showCheckmark: false,
@@ -92,7 +92,7 @@ class _FilterSectionState extends State<FilterSection> {
           InkWell(
             child: SvgPicture.asset(
               "assets/icons/plus-icon.svg",
-              colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
             ),
             onTap: () {
 
@@ -141,7 +141,7 @@ class BodySection extends StatelessWidget {
                   child: Text(
                     MyPocketModel.myPocketItems[index].pocketTitle,
                     style: Theme.of(context).textTheme.labelSmall?.apply(
-                      color: Theme.of(context).colorScheme.onBackground
+                      color: Theme.of(context).colorScheme.onSurface
                     )
                   ),
                 ),

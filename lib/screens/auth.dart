@@ -25,7 +25,7 @@ class Auth extends StatelessWidget {
               "Enter Security Code",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium?.apply(
-                color: Theme.of(context).colorScheme.onBackground
+                color: Theme.of(context).colorScheme.onSurface
               )
             ),
             const SizedBox(height: 16.0),
@@ -70,7 +70,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
               padding: const EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: isLastCursor && securityCode[0] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
+                  color: isLastCursor && securityCode[0] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onSurface
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0))
               ),
@@ -80,12 +80,12 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
                   "assets/icons/dot-icon.svg",
                   width: 8.0,
                   height: 8.0,
-                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.background, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.surface, BlendMode.srcIn),
                 ) : SvgPicture.asset(
                   "assets/icons/dot-icon.svg",
                   width: 8.0,
                   height: 8.0,
-                  colorFilter: isLastCursor ? ColorFilter.mode(Theme.of(context).colorScheme.primary, BlendMode.srcIn) : ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+                  colorFilter: isLastCursor ? ColorFilter.mode(Theme.of(context).colorScheme.primary, BlendMode.srcIn) : ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                 )
             ),
             const SizedBox(width: 20.0),
@@ -93,7 +93,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
               padding: const EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: isLastCursor && securityCode[1] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
+                  color: isLastCursor && securityCode[1] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onSurface
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0))
               ),
@@ -103,12 +103,12 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
                   "assets/icons/dot-icon.svg",
                   width: 8.0,
                   height: 8.0,
-                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.background, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.surface, BlendMode.srcIn),
                 ) : SvgPicture.asset(
                   "assets/icons/dot-icon.svg",
                   width: 8.0,
                   height: 8.0,
-                  colorFilter: isLastCursor ? ColorFilter.mode(Theme.of(context).colorScheme.primary, BlendMode.srcIn) : ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+                  colorFilter: isLastCursor ? ColorFilter.mode(Theme.of(context).colorScheme.primary, BlendMode.srcIn) : ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                 )
             ),
             const SizedBox(width: 20.0),
@@ -116,7 +116,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
               padding: const EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: isLastCursor && securityCode[2] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
+                  color: isLastCursor && securityCode[2] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onSurface
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0))
               ),
@@ -126,12 +126,12 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
                   "assets/icons/dot-icon.svg",
                   width: 8.0,
                   height: 8.0,
-                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.background, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.surface, BlendMode.srcIn),
                 ) : SvgPicture.asset(
                   "assets/icons/dot-icon.svg",
                   width: 8.0,
                   height: 8.0,
-                  colorFilter: isLastCursor ? ColorFilter.mode(Theme.of(context).colorScheme.primary, BlendMode.srcIn) : ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+                  colorFilter: isLastCursor ? ColorFilter.mode(Theme.of(context).colorScheme.primary, BlendMode.srcIn) : ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                 )
             ),
             const SizedBox(width: 20.0),
@@ -139,7 +139,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
               padding: const EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: isLastCursor && securityCode[3] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onBackground
+                  color: isLastCursor && securityCode[3] != null ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onSurface
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0))
               ),
@@ -149,12 +149,12 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
                   "assets/icons/dot-icon.svg",
                   width: 8.0,
                   height: 8.0,
-                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.background, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.surface, BlendMode.srcIn),
                 ) : SvgPicture.asset(
                   "assets/icons/dot-icon.svg",
                   width: 8.0,
                   height: 8.0,
-                  colorFilter: isLastCursor ? ColorFilter.mode(Theme.of(context).colorScheme.primary, BlendMode.srcIn) : ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+                  colorFilter: isLastCursor ? ColorFilter.mode(Theme.of(context).colorScheme.primary, BlendMode.srcIn) : ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                 )
             )
           ],
@@ -271,11 +271,11 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
                   "assets/icons/backspace-icon.svg",
                   width: 32.0,
                   height: 32.0,
-                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onBackground, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface, BlendMode.srcIn),
                 ) : Text(
                   keypadItemLabel[index],
                   style: Theme.of(context).textTheme.headlineMedium?.apply(
-                    color: Theme.of(context).colorScheme.onBackground
+                    color: Theme.of(context).colorScheme.onSurface
                   ),
                 )
               );

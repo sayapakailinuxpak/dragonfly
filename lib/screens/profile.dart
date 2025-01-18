@@ -39,7 +39,7 @@ class Profile extends StatelessWidget {
                         "Eldis Simone",
                         style: Theme.of(context).textTheme.titleMedium?.apply(
                           fontWeightDelta: 2,
-                          color: Theme.of(context).colorScheme.onBackground
+                          color: Theme.of(context).colorScheme.onSurface
                         )
                       ),
                       const SizedBox(height: 4.0),
@@ -105,10 +105,10 @@ class Profile extends StatelessWidget {
                   SystemChannels.platform.invokeMethod('SystemNavigator.pop');
                 }, 
                 style: ButtonStyle(
-                  textStyle: MaterialStatePropertyAll(Theme.of(context).textTheme.labelLarge),
-                  backgroundColor: MaterialStatePropertyAll(Theme.of(context).colorScheme.error),
-                  padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 16.0, horizontal: 10.0)),
-                  shape: MaterialStateProperty.all(
+                  textStyle: WidgetStatePropertyAll(Theme.of(context).textTheme.labelLarge),
+                  backgroundColor: WidgetStatePropertyAll(Theme.of(context).colorScheme.error),
+                  padding: const WidgetStatePropertyAll(EdgeInsets.symmetric(vertical: 16.0, horizontal: 10.0)),
+                  shape: WidgetStateProperty.all(
                     const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(8.0))
                     )
