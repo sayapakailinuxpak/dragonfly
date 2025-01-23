@@ -7,30 +7,31 @@ class Auth extends StatelessWidget {
   const Auth({super.key});
   
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {  
     return Scaffold(
-      body: Center(
-        // child: Keypad()
-        child: Column(
-          children: [
-            const SizedBox(height: 60.0),
-            SvgPicture.asset(
-              "assets/icons/lock-icon.svg",
-              width: 40.0,
-              height: 40.0,
-              colorFilter: ColorFilter.mode(Theme.of(context).primaryColor, BlendMode.srcIn)
-            ),
-            const SizedBox(height: 32.0),
-            Text(
-              "Enter Security Code",
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleMedium?.apply(
-                color: Theme.of(context).colorScheme.onSurface
-              )
-            ),
-            const SizedBox(height: 16.0),
-            const SecurityCodeForm(),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              const SizedBox(height: 60.0),
+              SvgPicture.asset(
+                "assets/icons/lock-icon.svg",
+                width: 40.0,
+                height: 40.0,
+                colorFilter: ColorFilter.mode(Theme.of(context).primaryColor, BlendMode.srcIn)
+              ),
+              const SizedBox(height: 32.0),
+              Text(
+                "Enter Security Code",
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.titleMedium?.apply(
+                  color: Theme.of(context).colorScheme.onSurface
+                )
+              ),
+              const SizedBox(height: 16.0),
+              const SecurityCodeForm(),
+            ],
+          ),
         ),
       )
     );
@@ -161,6 +162,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
         ),
         const SizedBox(height: 120.0),
         GridView.count(
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           mainAxisSpacing: 2.0,
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -234,7 +236,7 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
                         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                           content: Text("Welcome back!"),
                         ));
-
+        
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -257,9 +259,9 @@ class SecurityCodeFormState extends State<SecurityCodeForm> {
                       }  
                     }
                   });
-
+        
                   
-
+        
                   debugPrint("Sec code 0 = ${securityCode[0]}");
                   debugPrint("Sec code 1 = ${securityCode[1]}");
                   debugPrint("Sec code 2 = ${securityCode[2]}");

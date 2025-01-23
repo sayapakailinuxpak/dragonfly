@@ -36,8 +36,8 @@ class Inbox extends StatelessWidget {
         ),
         body: const TabBarView(
           children: [
-            InboxMessageSection(),
-            NotificationSection()
+            SingleChildScrollView(child: InboxMessageSection()),
+            SingleChildScrollView(child: NotificationSection())
           ],
         )
       )
@@ -123,6 +123,7 @@ class NotificationSection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
       child: ListView.separated(
+        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return InkWell(

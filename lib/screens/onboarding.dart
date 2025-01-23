@@ -25,6 +25,7 @@ class _OnboardingState extends State<Onboarding> {
 
   late PageController _pageController;
   
+  
   @override
   void initState() {
     super.initState();
@@ -39,6 +40,7 @@ class _OnboardingState extends State<Onboarding> {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQuery = MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
         title: SvgPicture.asset(
@@ -58,11 +60,22 @@ class _OnboardingState extends State<Onboarding> {
       ),
       body: PageView(
         controller: _pageController,
-        children: [
+        // children: [
+        //   if (mediaQuery.size.height < 640.0) SingleChildScrollView(child: _OnboardingBodyOne()) else _OnboardingBodyOne(),
+        //   // _OnboardingBodyOne(),
+        //   _OnboardingBodyTwo(),
+        //   _OnboardingBodyThree()
+        // ],
+        children: (mediaQuery.size.height < 640.0) ? [
+          SingleChildScrollView(child: _OnboardingBodyOne()),
+          SingleChildScrollView(child: _OnboardingBodyTwo()),
+          SingleChildScrollView(child: _OnboardingBodyThree())
+        ] : [
           _OnboardingBodyOne(),
           _OnboardingBodyTwo(),
           _OnboardingBodyThree()
-        ],
+        ]
+        
       ),
       bottomNavigationBar: Container(
         width: MediaQuery.of(context).size.width,
