@@ -60,18 +60,12 @@ class _OnboardingState extends State<Onboarding> {
       ),
       body: PageView(
         controller: _pageController,
-        // children: [
-        //   if (mediaQuery.size.height < 640.0) SingleChildScrollView(child: _OnboardingBodyOne()) else _OnboardingBodyOne(),
-        //   // _OnboardingBodyOne(),
-        //   _OnboardingBodyTwo(),
-        //   _OnboardingBodyThree()
-        // ],
         children: (mediaQuery.size.height < 640.0) ? [
           SingleChildScrollView(child: _OnboardingBodyOne()),
           SingleChildScrollView(child: _OnboardingBodyTwo()),
           SingleChildScrollView(child: _OnboardingBodyThree())
         ] : [
-          _OnboardingBodyOne(),
+          SingleChildScrollView(child: _OnboardingBodyOne()),
           _OnboardingBodyTwo(),
           _OnboardingBodyThree()
         ]
